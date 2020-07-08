@@ -7,7 +7,7 @@
   {% if form.errors %}
     <p>Provided credentials are incorrect. Try again.</p>
   {% else %}
-    <p>Enter your credentials:</p>
+    <p>Enter your credentials. If you have not an account yet, you can register <a href="{% url "register" %}">here</a>.</p>
   {% endif %}
   <div class="login-form">
     <form action="{% url 'login' %}" method="post">
@@ -16,5 +16,6 @@
       <input type="hidden" name="text" value="{{ next}}" />
       <p><input type="submit" value="Login"></p>
     </form>
+    <p><a href="{% url "password_reset" %}">Forgot your password?</a></p>
   </div>
 {% endblock %}
