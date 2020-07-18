@@ -131,3 +131,4 @@ dmypy.json
 # project related
 .vscode/
 config.env
+social_app/media/
