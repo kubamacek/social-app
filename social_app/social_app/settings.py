@@ -25,7 +25,7 @@ SECRET_KEY = 'l667%q%rsx_2a=*i0g%@%pk-fxd45!dy6h*@5pqk!by%s2h(jz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'socialapp.com', 'localhost', '127.0.0.1' ]
+ALLOWED_HOSTS = [ 'socialapp.com', 'localhost', '127.0.0.1', os.environ["NGROK_DOMAIN"] ]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'social_django',
     'images.apps.ImagesConfig',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
